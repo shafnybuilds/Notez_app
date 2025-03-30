@@ -1,10 +1,12 @@
 package config
 
+import "time"
 
 type config struct {
-	Environment		string		`mapstructure:"ENV"`
-	LogLevel		string		`mapstructure:"LOG_LEVEL"`
-	DBConnString	string		`mapstructure:"DB_CONN_STRING"`
-	HTTPServerAddress string	`mapstructure:"HTTP_SERVER_ADDRESS"`
-	PASETOSecret string `mapstructure:"PASETO_SYMMETRIC_KEY"`
+	Environment         string        `mapstructure:"ENV"`
+	LogLevel            string        `mapstructure:"LOG_LEVEL"`
+	DBConnString        string        `mapstructure:"DB_CONN_STRING"`
+	HTTPServerAddress   string        `mapstructure:"HTTP_SERVER_ADDRESS"`
+	PASETOSecret        string        `mapstructure:"PASETO_SYMMETRIC_KEY"`
+	AccessTokenDuration time.Duration `mapstucture:"ACCESS_TOKEN_DURATION"`
 }
